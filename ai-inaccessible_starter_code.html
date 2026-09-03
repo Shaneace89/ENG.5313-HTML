@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Tickets</title>
+</head>
+<body>
+  <!-- Fixed alt text -->
+  <img src="etap_banner.jpg" alt="IT Department Logo" style="width: 100%; height: auto;"> <!-- Bug 1: Missing alt -->
+  
+  <main class="main">
+    <!-- Semantic heading -->
+    <h1 class="title">IT Tickets - Submit A Ticket</h1> 
+    <hr>
+        <img src="it-crowd.jpg" alt="Flowchart showing the ticket lifecycle: Submit, Review, Resolve, Close" style="width: 40%; height: auto; float: right;"> <!-- Bug 4: No diagram alt -->
+
+        <!-- Descriptive link text -->
+    <a href="ETAP-FAQs.pdf">Download the IT Ticket Guide (PDF)</a> 
+    <h2><span style="color:red" aria-hidden="true">*</span> Required</h2>
+    
+    <div>
+      <!-- Programmatic label and required attribute -->
+      <label for="userName">Name:</label> 
+      <input type="text" id="userName" required> 
+    </div>
+    
+    <br><br>
+    <!-- Descriptive alt text for the diagram -->
+    
+    <!-- Native button for keyboard/screen reader access -->
+    <button type="button" class="btn" onclick="send()">Submit</button> 
+    
+
+  </main>
+</body>
+</html>
