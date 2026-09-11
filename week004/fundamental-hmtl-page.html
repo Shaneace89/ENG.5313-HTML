@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane's - IT Tickets</title>
+    <style>
+        /* ==========================================================================
+           BASE & BODY STYLES
+           ========================================================================== */
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f8;
+            color: #333333;
+            line-height: 1.5;
+        }
+
+        /* ==========================================================================
+           HEADER & BANNER STYLES
+           ========================================================================== */
+        /* Banner wrapper: sets fixed height and keeps image contained */
+        .banner-container {
+            position: relative;
+            width: 100%;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        /* Banner background image */
+        .banner-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block;
+        }
+
+        /* Overlay text on top of the banner image */
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            transform: translateY(-50%);
+            margin: 0;
+            color: #ffffff;
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+        }
+
+        /* ==========================================================================
+           MAIN CONTENT & FORM CONTAINER
+           ========================================================================== */
+        /* Card box that holds the intro text and form fields */
+        .main {
+            max-width: 640px;
+            margin: -40px auto 48px; /* Negative top margin pulls card over banner */
+            position: relative;
+            background: #ffffff;
+            padding: 32px 36px;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            box-sizing: border-box;
+        }
+
+        /* Intro message section */
+        .intro {
+            margin-bottom: 24px;
+            border-bottom: 1px solid #e5e7eb;
+            padding-bottom: 16px;
+        }
+
+        .intro h2 {
+            margin: 0 0 8px 0;
+            font-size: 1.35rem;
+            color: #111827;
+        }
+
+        .intro p {
+            margin: 0;
+            color: #4b5563;
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           FORM INPUTS & LABELS
+           ========================================================================== */
+        /* Flex row to put Name and Email side-by-side */
+        .form-row {
+            display: flex;
+            gap: 16px;
+        }
+
+        /* Wrapper for each label/input pair */
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 18px;
+            flex: 1;
+        }
+
+        /* Input field labels */
+        .form-group label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 6px;
+        }
+
+        /* Standard text and email inputs */
+        .form-group input[type="text"],
+        .form-group input[type="email"] {
+            padding: 10px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 0.95rem;
+            color: #1f2937;
+            background-color: #f9fafb;
+            box-sizing: border-box;
+            transition: border-color 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        /* Focus state outline for accessibility */
+        .form-group input:focus {
+            outline: none;
+            border-color: #2563eb;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+        }
+
+        /* File upload field styling */
+        .form-group input[type="file"] {
+            font-size: 0.9rem;
+            color: #4b5563;
+        }
+
+        /* Small caption text under file upload */
+        .file-hint {
+            display: block;
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+
+        /* Submit button styling */
+        .btn {
+            display: block;
+            width: 100%;
+            background-color: #2563eb;
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.15s ease;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+        }
+
+        .btn:focus-visible {
+            outline: 3px solid #93c5fd;
+            outline-offset: 2px;
+        }
+
+        /* ==========================================================================
+           FOOTER STYLES
+           ========================================================================== */
+        .site-footer {
+            background-color: #2b2b2b; 
+            color: #e0e0e0;            
+            text-align: center;
+            padding: 24px 16px;
+            margin-top: 48px;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        .site-footer p {
+            margin: 4px 0;
+        }
+
+        .site-footer strong {
+            color: #ffffff;
+        }
+
+        /* ==========================================================================
+           RESPONSIVE MOBILE BREAKPOINTS
+           ========================================================================== */
+        @media (max-width: 680px) {
+            .main {
+                margin: 20px 16px 36px;
+                padding: 24px 20px;
+            }
+            /* Stack Name and Email on mobile screens */
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            .banner-text {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================================================
+         TOP BANNER SECTION
+         ========================================================================== -->
+    <header class="banner-container">
+        <!-- Banner Image (alt is empty so screen readers don't read decorative image) -->
+        <img src="tickets_banner.jpeg" alt="">
+        <!-- Page H1 Heading Overlay -->
+        <h1 class="banner-text">IT Support Helpdesk</h1>
+    </header>
+
+    <!-- ==========================================================================
+         MAIN TICKET FORM CARD
+         ========================================================================== -->
+    <main class="main">
+        <!-- Introductory message -->
+        <section class="intro">
+            <h2>Have you tried turning it off and on again?</h2>
+            <p>
+                If yes (or if things are smoking, making weird clicking noises, or simply refusing to cooperate), fill out the form below. 
+                Screenshots of error messages are appreciated, passive-aggressive photos of your monitor work too. We'll take it from here.
+            </p>
+        </section>
+
+        <!-- IT Ticket Form -->
+        <form id="ticketForm" onsubmit="send(event)">
+            <!-- User Info Row (Name and Email side-by-side) -->
+            <div class="form-row">
+                <!-- User Name Field -->
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" autocomplete="name" required>
+                </div>
+
+                <!-- User Email Field -->
+                <div class="form-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" autocomplete="email" required>
+                </div>
+            </div>
+
+            <!-- Ticket Subject / Issue Field -->
+            <div class="form-group">
+                <label for="subject">Issue:</label>
+                <input type="text" id="subject" name="subject" placeholder="Short summary" required>
+            </div>
+
+            <!-- File Upload / Screenshot Field -->
+            <div class="form-group">
+                <label for="file">Attachment:</label>
+                <input 
+                    type="file" 
+                    id="file" 
+                    name="file" 
+                    accept="image/*,.pdf,.png,.jpg,.jpeg" 
+                    aria-describedby="file-desc"
+                >
+                <!-- Helper text tied to input for screen readers -->
+                <small id="file-desc" class="file-hint">Accepted formats: Images or PDF</small>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+
+    <!-- ==========================================================================
+         PAGE FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Shane's IT Helpdesk. All rights reserved.</p>
+        <p>Need urgent help? Call the Helpdesk hotline at <strong>0118 999 881 999 119 725... 3</strong></p>
+    </footer>
+
+</body>
+</html>
