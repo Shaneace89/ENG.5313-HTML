@@ -1,12 +1,12 @@
-# React Proposal – Motocross Lap Timer
+## React Proposal – Motocross Lap Timer
 
-## Shane Fleming – github.com/Shaneace89
+### Shane Fleming – github.com/Shaneace89
 
-### Abstract
+#### Abstract
 
 I will be developing an open-source, self-contained motocross lap timer to provide an affordable alternative to proprietary systems. The hardware and software stack will run entirely offline on a local Raspberry Pi deployed trackside. Laps will be detected using a physical trigger mechanism, such as a pressure plate or Passive Infrared (PIR) sensor directly wired to the Pi's GPIO pins.
 
-### Architecture & Stack
+#### Architecture & Stack
 
 * Frontend: React optimized for responsive viewing.
 
@@ -18,7 +18,7 @@ I will be developing an open-source, self-contained motocross lap timer to provi
 
 * Network: Configured with a hotspot on my phone, allowing any device connected to the hotspot to view the interface.
 
-### Hardware & Environmental Testing
+#### Hardware & Environmental Testing
 
 * Rebound Logic: Implement software logic to ignore consecutive hits within a short window, to eliminate false trips from front/rear tires.
 
