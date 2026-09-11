@@ -1,6 +1,6 @@
 ## React Proposal – Motocross Lap Timer
 
-### Shane Fleming – github.com/Shaneace89
+### Shane Fleming – [github.com/Shaneace89](https://github.com/Shaneace89)
 
 #### Abstract
 
