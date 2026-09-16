@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shane's - IT Tickets</title>
+
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==========================================================================
+         TOP BANNER SECTION
+         ========================================================================== -->
+    <header class="banner-container">
+        <!-- Banner Image (alt is empty so screen readers don't read decorative image) -->
+        <img src="tickets_banner.jpeg" alt="">
+        <!-- Page H1 Heading Overlay -->
+        <h1 class="banner-text">IT Support Helpdesk</h1>
+    </header>
+
+    <!-- ==========================================================================
+         MAIN TICKET FORM CARD
+         ========================================================================== -->
+    <main class="main">
+        <!-- Introductory message -->
+        <section class="intro">
+            <h2>Have you tried turning it off and on again?</h2>
+            <p>
+                If yes (or if things are smoking, making weird clicking noises, or simply refusing to cooperate), fill out the form below. 
+                Screenshots of error messages are appreciated, passive-aggressive photos of your monitor work too. We'll take it from here.
+            </p>
+        </section>
+
+        <!-- IT Ticket Form -->
+        <form id="ticketForm" onsubmit="send(event)">
+            <!-- User Info Row (Name and Email side-by-side) -->
+            <div class="form-row">
+                <!-- User Name Field -->
+                <div class="form-group">
+                    <label for="userName">Name:</label>
+                    <input type="text" id="userName" name="userName" autocomplete="name" required>
+                </div>
+
+                <!-- User Email Field -->
+                <div class="form-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" name="userEmail" autocomplete="email" required>
+                </div>
+            </div>
+
+            <!-- Ticket Subject / Issue Field -->
+            <div class="form-group">
+                <label for="subject">Issue:</label>
+                <input type="text" id="subject" name="subject" placeholder="Short summary" required>
+            </div>
+
+            <!-- File Upload / Screenshot Field -->
+            <div class="form-group">
+                <label for="file">Attachment:</label>
+                <input 
+                    type="file" 
+                    id="file" 
+                    name="file" 
+                    accept="image/*,.pdf,.png,.jpg,.jpeg" 
+                    aria-describedby="file-desc"
+                >
+                <!-- Helper text tied to input for screen readers -->
+                <small id="file-desc" class="file-hint">Accepted formats: Images or PDF</small>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </main>
+
+    <!-- ==========================================================================
+         PAGE FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Shane's IT Helpdesk. All rights reserved.</p>
+        <p>Need urgent help? Call the Helpdesk hotline at <strong>0118 999 881 999 119 725... 3</strong></p>
+    </footer>
+
+</body>
+</html>
