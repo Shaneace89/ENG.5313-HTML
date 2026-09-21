@@ -1,4 +1,4 @@
-/* ==========================================================================
+        /* ==========================================================================
            BASE & BODY STYLES
            ========================================================================== */
         body {
@@ -7,6 +7,10 @@
             background-color: #f4f6f8;
             color: #333333;
             line-height: 1.5;
+
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;        
         }
 
         /* ==========================================================================
@@ -47,7 +51,7 @@
         /* Card box that holds the intro text and form fields */
         .main {
             max-width: 640px;
-            margin: -40px auto 48px; /* Negative top margin pulls card over banner */
+            margin: -40px auto 48px; 
             position: relative;
             background: #ffffff;
             padding: 32px 36px;
@@ -100,9 +104,10 @@
             margin-bottom: 6px;
         }
 
-        /* Standard text and email inputs */
+        /* Standard text, email, and textarea inputs */
         .form-group input[type="text"],
-        .form-group input[type="email"] {
+        .form-group input[type="email"],
+        .form-group textarea {
             padding: 10px 12px;
             border: 1px solid #d1d5db;
             border-radius: 6px;
@@ -111,10 +116,17 @@
             background-color: #f9fafb;
             box-sizing: border-box;
             transition: border-color 0.15s ease, box-shadow 0.15s ease;
+            font-family: inherit; 
+        }
+
+        /* Allow users to drag the textarea taller, but not wider */
+        .form-group textarea {
+            resize: vertical;
         }
 
         /* Focus state outline for accessibility */
-        .form-group input:focus {
+        .form-group input:focus,
+        .form-group textarea:focus {
             outline: none;
             border-color: #2563eb;
             background-color: #ffffff;
@@ -142,16 +154,19 @@
             background-color: #2563eb;
             color: #ffffff;
             border: none;
-            padding: 12px;
-            font-size: 1rem;
+            padding: 14px; 
+            font-size: 1.05rem;
             font-weight: 600;
-            border-radius: 6px;
+            border-radius: 8px; 
             cursor: pointer;
-            transition: background-color 0.15s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3); 
+            transition: all 0.2s ease;
         }
 
         .btn:hover {
             background-color: #1d4ed8;
+            box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4); 
+            transform: translateY(-1px); 
         }
 
         .btn:focus-visible {
@@ -163,11 +178,11 @@
            FOOTER STYLES
            ========================================================================== */
         .site-footer {
-            background-color: #2b2b2b; 
-            color: #e0e0e0;            
+            background-color: #2b2b2b;
+            color: #e0e0e0;
             text-align: center;
             padding: 24px 16px;
-            margin-top: 48px;
+            margin-top: auto;
             font-size: 0.9rem;
             line-height: 1.5;
         }

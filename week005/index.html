@@ -33,8 +33,8 @@
             </p>
         </section>
 
-        <!-- IT Ticket Form -->
-        <form id="ticketForm" onsubmit="send(event)">
+        <!-- IT Ticket Form (Redirects to success.html for prototype) -->
+        <form action="success.html">
             <!-- User Info Row (Name and Email side-by-side) -->
             <div class="form-row">
                 <!-- User Name Field -->
@@ -50,10 +50,10 @@
                 </div>
             </div>
 
-            <!-- Ticket Subject / Issue Field -->
+            <!-- Ticket Subject / Issue Textarea -->
             <div class="form-group">
                 <label for="subject">Issue:</label>
-                <input type="text" id="subject" name="subject" placeholder="Short summary" required>
+                <textarea id="subject" name="subject" rows="4" placeholder="Provide a short summary..." required></textarea>
             </div>
 
             <!-- File Upload / Screenshot Field -->
