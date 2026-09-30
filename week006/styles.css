@@ -1,0 +1,30 @@
+h1 {
+  color: blueviolet;
+  padding: 20px;
+}
+
+hr {
+  border: none; /* Remove default border */
+  border-top: 2px dotted #999; /* Apply a dotted top border */
+  color: #999; /* Set color for older browsers, though border-top color is dominant */
+  background-color: transparent; /* Ensure no background color interferes */
+  height: 1px; /* Minimal height to ensure border is visible */
+  margin: 20px 0; /* Add some vertical spacing */
+}
+
+ul {
+  list-style-type: square; /* Changes bullets to squares */
+}
+
+body {
+  background-color: beige;
+  border: thick dashed rebeccapurple;
+  margin: 0;
+  padding: 0;
+}
+
+.codingClass {
+  width: 100%; /* Ensures it spans the full width of its parent */
+  min-height: 100vh; /* Ensures it spans at least the full viewport height */
+  box-sizing: border-box; /* Ensures padding and border are included in the element's total width */
+}
