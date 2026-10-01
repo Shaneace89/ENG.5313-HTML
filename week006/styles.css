@@ -1,0 +1,50 @@
+/* 1. Custom CSS Grid for 2D Card Layout (Meets Grid Requirement) */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 576px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2. Touch Target Size Rule (Meets >= 44px Accessibility Requirement) */
+.nav-link,
+.btn,
+.stretched-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* 3. Hero Banner Custom Rules */
+.banner-image {
+  height: 35vh;
+  min-height: 220px;
+  max-height: 400px;
+  background: url("tickets_banner.jpeg") center/cover no-repeat;
+}
+
+.banner-image h1,
+.banner-image p {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.55);
+}
+
+/* 4. Card Micro-interactions */
+.hover-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
