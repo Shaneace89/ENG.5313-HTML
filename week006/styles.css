@@ -1,4 +1,4 @@
-/* 1. Custom CSS Grid for 2D Card Layout (Meets Grid Requirement) */
+/* 1. Custom CSS Grid for 2D Card Layout */
 .card-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -17,7 +17,7 @@
   }
 }
 
-/* 2. Touch Target Size Rule (Meets >= 44px Accessibility Requirement) */
+/* 2. Touch Target Size Rule */
 .nav-link,
 .btn,
 .stretched-link {
