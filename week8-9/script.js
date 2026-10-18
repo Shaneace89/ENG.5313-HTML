@@ -6,6 +6,12 @@ const helpBox = document.querySelector('#help-box');
 helpButton.addEventListener('click', function() {
   // classList.toggle adds 'hidden' if it's missing, or removes it if it's there!
   helpBox.classList.toggle('hidden');
+
+  if (helpBox.classList.contains('hidden')) {
+    console.log('Help Box is now hidden.');
+  } else {
+    console.log('Help Box is now visible.');
+  }
 });
 
 // Step 3: Our JSON Data Envelope (DTO)
@@ -27,6 +33,7 @@ loadTermBtn.addEventListener('click', function() {
     termCard.hidden = true;
     loadTermBtn.setAttribute('aria-expanded', 'false');
     loadTermBtn.textContent = '📖 Show Definition for "DTO"';
+    console.log('DTO card is now hidden.');
     return;
   }
 
@@ -38,4 +45,5 @@ loadTermBtn.addEventListener('click', function() {
   termCard.hidden = false;
   loadTermBtn.setAttribute('aria-expanded', 'true');
   loadTermBtn.textContent = '📖 Hide Definition for "DTO"';
+  console.log('DTO card is now visible.');
 });
